@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberSafe | Cybersecurity Awareness</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="#home">CyberSafe</a>
+      <div class="nav-links">
+        <a href="#learn">Learn</a>
+        <a href="#phishing">Phishing</a>
+        <a href="#passwords">Passwords</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#phishing-demo">Email Demo</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="tag">YOUR GUIDE TO ONLINE SAFETY</p>
+      <h1>Stay Safe in the Digital World</h1>
+      <p>
+        Learn how to protect your information, recognize online
+        scams, and browse the internet safely.
+      </p>
+      <a class="button" href="#learn">Start Learning</a>
+    </section>
+
+    <section class="section" id="learn">
+      <h2>Learn Cybersecurity</h2>
+      <p class="intro">Understand common online threats and how to avoid them.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="symbol">🎣</div>
+          <h3>Phishing Attacks</h3>
+          <p>Learn to identify fake emails, messages, and websites
+             designed to steal your information.</p>
+          <a href="#phishing">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🔐</div>
+          <h3>Password Safety</h3>
+          <p>Discover how to create strong, unique passwords
+             and protect your accounts.</p>
+          <a href="#passwords">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🛡️</div>
+          <h3>Online Protection</h3>
+          <p>Keep your devices updated and be careful when
+             sharing personal information online.</p>
+          <a href="#protection">Learn more →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shaded" id="phishing">
+      <h2>How to Recognize Phishing</h2>
+      <p>Watch for these warning signs before clicking a link.</p>
+      <ul class="tips">
+        <li>Unexpected messages asking for passwords or bank details.</li>
+        <li>Links that use misspelled or unfamiliar website addresses.</li>
+        <li>Messages creating urgency or threatening account closure.</li>
+        <li>Unexpected attachments or requests for verification codes.</li>
+      </ul>
+      <p class="notice">
+        Safety tip: Visit the official website directly instead of
+        following suspicious links.
+      </p>
+    </section>
+    
+<section class="section" id="phishing-demo">
+  <h2>Phishing Email Detection Demo</h2>
+  <p>
+    Learn how to identify suspicious emails before responding
+    or clicking any links.
+  </p>
+
+  <div class="info-panel">
+    <p><strong>From:</strong> security@example.test</p>
+    <p><strong>Subject:</strong> Urgent! Your account will be blocked</p>
+    <p>
+      Your account may be suspended. Verify your details
+      immediately to avoid losing access.
+    </p>
+    <p><strong>Link:</strong> [Suspicious verification link hidden]</p>
+
+    <button id="analyze-email" class="button">
+      Analyze This Email
+    </button>
+
+    <div id="email-analysis" role="status" aria-live="polite"></div>
+  </div>
+</section>
+
+    <section class="section" id="passwords">
+      <h2>Keep Your Passwords Safe</h2>
+      <div class="info-panel">
+        <p>✓ Use long, unique passwords for different accounts.</p>
+        <p>✓ Use a reputable password manager.</p>
+        <p>✓ Turn on multi-factor authentication when available.</p>
+        <p>✓ Never share one-time verification codes with others.</p>
+      </div>
+      
+<div class="info-panel">
+  <h3>Check Password Strength</h3>
+  <p>Use a sample password to get basic feedback.</p>
+
+  <label for="password-check">Enter a sample password:</label>
+  <input
+    id="password-check"
+    type="password"
+    placeholder="Type a sample password"
+    autocomplete="off"
+  >
+
+  <button type="button" id="check-password" class="button">
+    Check Strength
+  </button>
+
+  <p id="password-result" role="status" aria-live="polite"></p>
+</div>
+
+    </section>
+
+    <section class="section shaded" id="protection">
+      <h2>Everyday Online Safety</h2>
+      <div class="info-panel">
+        <p>✓ Install security updates for your devices and apps.</p>
+        <p>✓ Download software from trusted sources.</p>
+        <p>✓ Check website addresses before entering sensitive details.</p>
+        <p>✓ Back up important files regularly.</p>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <h2>Test Your Cybersecurity Knowledge</h2>
+      <p>Someone emails you asking for your password urgently.
+         What should you do?</p>
+
+      <div class="quiz-options">
+        <button class="answer" data-correct="false">
+          Reply with my password
+        </button>
+        <button class="answer" data-correct="true">
+          Do not reply; verify through an official channel
+        </button>
+        <button class="answer" data-correct="false">
+          Click the link immediately
+        </button>
+      </div>
+
+      <p id="quiz-result" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>CyberSafe | Cybersecurity Awareness Project</p>
+    <p>Learn. Think. Stay Safe.</p>
+  </footer>
+</body>
+</html>

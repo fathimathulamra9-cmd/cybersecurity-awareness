@@ -1,0 +1,314 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #e8eefc;
+  background: #0b1224;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 8%;
+  background: #111c33;
+}
+
+.logo {
+  color: #62e6c5;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: #e8eefc;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.card a:hover {
+  color: #62e6c5;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #152d54, #10233d);
+}
+
+.tag {
+  color: #62e6c5;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  max-width: 750px;
+  margin: 15px auto;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.2;
+}
+
+.hero > p:not(.tag) {
+  max-width: 620px;
+  margin: 20px auto 30px;
+  color: #c2cce0;
+}
+
+.button {
+  display: inline-block;
+  background: #62e6c5;
+  color: #0b1224;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section {
+  padding: 60px 8%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.intro {
+  color: #b8c5dc;
+  margin-bottom: 28px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.card {
+  padding: 24px;
+  background: #15213a;
+  border: 1px solid #2a3b5b;
+  border-radius: 14px;
+}
+
+.symbol {
+  font-size: 32px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p,
+.section > p {
+  color: #c2cce0;
+}
+
+.card a {
+  color: #62e6c5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.shaded {
+  max-width: none;
+  background: #111c33;
+}
+
+.shaded > h2,
+.shaded > p,
+.shaded > ul,
+.info-panel {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tips {
+  padding-left: 24px;
+}
+
+.tips li {
+  margin: 12px 0;
+}
+
+.notice {
+  background: #203651;
+  border-left: 4px solid #62e6c5;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.info-panel {
+  padding: 20px;
+  background: #15213a;
+  border-radius: 12px;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 12px;
+  max-width: 650px;
+  margin-top: 22px;
+}
+
+.answer {
+  padding: 14px;
+  text-align: left;
+  border: 1px solid #435474;
+  border-radius: 8px;
+  background: #15213a;
+  color: #e8eefc;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.answer:hover {
+  border-color: #62e6c5;
+}
+
+.answer:focus-visible,
+a:focus-visible {
+  outline: 3px solid #62e6c5;
+  outline-offset: 3px;
+}
+
+#quiz-result {
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #070d19;
+  color: #aebbd2;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 65px 20px;
+  }
+
+  .section {
+    padding: 45px 6%;
+  }
+}
+
+/* Keep the navigation visible while scrolling */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Smooth card animation */
+.card {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #62e6c5;
+}
+
+/* Better button appearance */
+.button,
+.answer {
+  transition: background-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.button:hover {
+  background: #8af3d8;
+  transform: translateY(-2px);
+}
+
+/* Improve text inputs */
+input[type="password"],
+input[type="text"] {
+  max-width: 100%;
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid #62e6c5;
+  outline-offset: 2px;
+}
+
+/* Improve learning and password panels */
+.info-panel {
+  border: 1px solid #2a3b5b;
+  line-height: 1.8;
+}
+
+/* Improve quiz answers */
+.answer:hover:not(:disabled) {
+  background: #203651;
+  transform: translateX(3px);
+}
+
+.answer:disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+
+/* Make navigation links easier to use */
+.nav-links a {
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+/* Adjust layout for mobile screens */
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .section h2 {
+    font-size: 25px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
